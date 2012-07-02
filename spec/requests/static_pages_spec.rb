@@ -7,12 +7,11 @@ describe "Static pages" do
     before { visit root_path } 
 
     it "should have the h1 'Sample App'" do
-      page.should have_selector('h1', :text => 'Sample App')
+      page.should have_selector('h1', text: 'Sample App')
     end
 
     it "should have the title 'Home'" do
-      page.should have_selector('title',
-                        :text => "Rails Sample App")
+      page.should have_selector('title', text: "Rails Sample App")
     end
   end
 
@@ -20,12 +19,12 @@ describe "Static pages" do
     before { visit help_path } 
 
     it "should have the h1 'Help'" do
-      page.should have_selector('h1', :text => 'Help')
+      page.should have_selector('h1', text: 'Help')
     end
 
     it "should have the title 'Help'" do
       page.should have_selector('title',
-                        :text => "Rails Sample App | Help")
+                        text: "Rails Sample App | Help")
     end
   end
 
